@@ -16,7 +16,7 @@ let mhs2 = {
   jurusan: "teknik teknikan ",
 };
 /*
-    kelebihan : gampang bautnya
+    kelebihan : gampang buatnya
     kekurangan ; tidak reusable harus copy paste dulu kaye
 
     */
