@@ -1,7 +1,3 @@
-// destructuring variabel / assigment
-
-
-
 // destructuring array
 
     // konsepnya sama aja kalo kita get array/ nangkap array 
@@ -88,3 +84,5 @@ const [a,...b] = [1,2,3,4,5,6,7,8];
 console.log(a,b);
 
 // maka akan kepanggil semua walaupun yang dipanggil dalam bentuk array 
+
+
