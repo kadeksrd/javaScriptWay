@@ -29,7 +29,7 @@ const all = sumMultiples(2,3);
 
 const kalkulas = (a,b) => [a+b,a-b,a*b,a/b];
 
-// const[jumlah,kurang,kali,bagi] = kalkulas(2,3)
+const[jumlah,kurang,kali,bagi] = kalkulas(2,3)
 
 
 // untuk array posisi saat function dipanggil tidak bisa diubah2
