@@ -1,5 +1,16 @@
 // for of
 
+// meloop object yang iterable / menelusuri object yang iterable
+
+// contoh
+// 1. string
+// 2. array
+// 3 arguments/NodeList
+// 4. typed array
+// 5. map
+// 6. set
+// 7. user-defined iterable
+
 // looping array
 
     const mhs = [`kadek`, `surya`, `rds`];
@@ -65,3 +76,44 @@ const mhs2 = [`kadek`, `surya`, `rds`];
     for (n of namaLi) {
     console.log(n.textContent);
     }
+
+
+// arguments
+
+function jumlahAngka(){
+    // return arguments.reduce((a,i) => a + i);
+    // arguments.forEach(a => jumlah += a) 
+
+    let jumlah = 0;
+    for( a of arguments){
+        jumlah += a;
+    }
+    return jumlah;
+}
+
+console.log(jumlahAngka(1,2,3,4,5));
+
+// note 
+
+// untuk menjumlahkan suatu arguments / menggunakan arguments kosong
+// tidak bisa menggunakan reduce dan forEach karena arguments bukan bentuk array
+// bisa menggunakan for of karena arguments masuk kedalam iterable object 
+
+// for in 
+
+// menloop isi dari object atau properti dari object
+
+// contoh
+
+const newMhs = {
+    nama:"kadek Surya Rena Dwipayana",
+    umur: 21,
+    email : `kadeksuryard@example.com`,
+}
+
+for (m in newMhs) {
+    // propertinya
+        // console.log(m);
+    // isi properti / valuenya
+    console.log(newMhs[m]);
+}
