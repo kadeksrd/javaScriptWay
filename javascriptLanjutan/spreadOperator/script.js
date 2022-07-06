@@ -35,15 +35,27 @@
 
     // jadi saat array reference nya diubah yang aslinya ga ikut keubah
 
+
+    
 // mengubah node list menjadi array menggunakan map
 
 const namas = document.querySelectorAll(`li`);
 
-// menggunakan function map 
+    // menggunakan function map 
 const mhs3 = [...namas].map(m => m.textContent);
 
 console.log(mhs3)
 
-// jadi agar bisa diconsole menjadi array maka digunakan pergabungan 
-// spread  operator agar dipecah dan diubah menjadi array 
-// dan map biar di keluarkan isi semua isi array nya
+    // jadi agar bisa diconsole menjadi array maka digunakan pergabungan 
+    // spread  operator agar dipecah dan diubah menjadi array 
+    // dan map biar di keluarkan isi semua isi array nya
+
+// pecah h1 menjadi span per kata menggunakan spread operator
+
+const nama = document.querySelector(`.nama`);
+const huruf = [...nama.textContent].map(h => `
+<span>${h}</span>`).join(''); 
+console.log(huruf);
+ 
+// pecah huruf kedalam h1 
+nama.innerHTML = huruf;
