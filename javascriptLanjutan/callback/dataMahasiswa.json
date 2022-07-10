@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "kadek",
+        "nrp": "12312241412",
+        "email": "kadeksuryard13@gmail.com",
+        "jurusan": "teknik kemiskinan",
+        "idDosenWali": 1
+    },
+    {
+        "nama": "orang",
+        "nrp": "1231412412",
+        "email": "orang@gmail.com",
+        "jurusan": "teknik kemiskinan",
+        "idDosenWali": 2
+    },
+    {
+        "nama": "mahluk hidup",
+        "nrp": "142141142",
+        "email": "orang@gmail.com",
+        "jurusan": "teknik kemiskinan",
+        "idDosenWali": 3
+    }
+    ]
