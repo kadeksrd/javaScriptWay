@@ -73,38 +73,54 @@
 // kita mengambil data nama dari file json langsung dan mengambil data dengan menggunakan server
 // yang dimana request servernya menggunakan ajax
 // versi javascript vanilla
-function getDataMahasiswa(url, success, error) {
-  let xhr = new XMLHttpRequest(); //  XMLHttpRequest  objectnya   url (       http://localhost    )   //
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4) {
-      // success  oranged
-      if (xhr.status == 200) {
-        // success oranged
-        success(xhr.response);
-      } else if (xhr.status == 404) {
-        // error oranged
-        error();
-      }
-    }
-  };
+// function getDataMahasiswa(url, success, error) {
+//   let xhr = new XMLHttpRequest(); //  XMLHttpRequest  objectnya   url (       http://localhost    )   //
 
-  xhr.open("GET", url);
-  xhr.send();
-}
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState == 4) {
+//       // success  oranged
+//       if (xhr.status == 200) {
+//         // success oranged
+//         success(xhr.response);
+//       } else if (xhr.status == 404) {
+//         // error oranged
+//         error();
+//       }
+//     }
+//   };
 
+//   xhr.open("GET", url);
+//   xhr.send();
+// }
+
+// console.log(`mulai`);
+// getDataMahasiswa(
+//   `dataMahasiswa.json`,
+//   (results) => {
+//     const mhs = JSON.parse(results); // untuk mengubah array result jadi object
+//     mhs.forEach((m) => console.log(m.nama));
+//   },
+//   () => {}
+// );
+
+// console.log("selesai");
+
+
+
+// cara jquery 
 console.log(`mulai`);
-getDataMahasiswa(
-  `dataMahasiswa.json`,
-  (results) => {
-    const mhs = JSON.parse(results); // untuk mengubah array result jadi object
-    mhs.forEach((m) => console.log(m.nama));
+$.ajax({
+  url: 'dataMahasiswa.json',
+  success: (mhs) => {
+    mhs.forEach( m => console.log(m.nama));
   },
-  () => {}
-);
-
-
+  error: (e) => {
+    console.log(e.responseText);
+  }
+});
 console.log("selesai");
+
 
 // karena asynchronus
 // maka yang akan dijalankan yang ada distacknya dulu
