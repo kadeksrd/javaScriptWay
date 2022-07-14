@@ -44,8 +44,6 @@ $('.search-button').on('click', function () {
 
 
 
-
-
 function showCards(m) {
   return `             
             <div class="col-md-4 my-5">

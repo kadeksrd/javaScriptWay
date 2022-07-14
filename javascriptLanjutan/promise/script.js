@@ -37,7 +37,7 @@
 
     let ditempati = true;
 
-    // persiapannya
+    // property
     const janji = new Promise((resolve, reject) => {
         if(ditempati){
             resolve('janji telah ditepati!');
@@ -49,7 +49,7 @@
     console.log(janji)
 
 
-    // AKSINYA
+    // objectnya / aksi objectnya
     janji
     .then(response => console.log('OK! ' + response ))
     .catch(response => console.log('NOT OK!' +  response));  //  TODO: error handling here
